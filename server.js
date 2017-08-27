@@ -14,13 +14,14 @@ var articleOne ={
                 this is content for the first article
             </p>`
 };
+
 function createTemplate(data){
   var title = data.title;
   var date = data.date;
   var heading = data.heading;
   var content = data.content;
 
-var htmlTempelate = `
+var htmlTemplate = `
 
     <HTML>
     <head>

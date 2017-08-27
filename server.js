@@ -47,7 +47,7 @@ var htmlTempelate = `
         
     </body>
 </HTML> `;
-return htmlTempelate
+return htmlTempelate;
 
 }
 
@@ -80,7 +80,7 @@ app.get('/counter',function(req,res){
 });
 
 app.get('/article-one.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+  res.send(createTempelate(articleOne));
 
 });
 

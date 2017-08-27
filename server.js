@@ -14,7 +14,7 @@ var articleOne ={
                 this is content for the first article
             </p>`
 };
-function createTempelate(data){
+function createTemplate(data){
   var title = data.title;
   var date = data.date;
   var heading = data.heading;
@@ -29,6 +29,7 @@ var htmlTempelate = `
         </title>
     </head>
     <body>
+    <div class="container">
         <div>
             <a href="/">Home</a>
         </div>
@@ -40,9 +41,10 @@ var htmlTempelate = `
             ${date}
         </div>
         <div>
-            <p>
+            
                 ${content}
-            </p>
+            
+        </div>
         </div>
         
     </body>

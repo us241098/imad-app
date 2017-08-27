@@ -82,7 +82,7 @@ app.get('/counter',function(req,res){
 });
 
 app.get('/article-one.html', function (req, res) {
-  res.send(createTempelate(articleOne));
+  res.send(createTemplate(articleOne));
 
 });
 

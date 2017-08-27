@@ -49,7 +49,7 @@ var htmlTempelate = `
         
     </body>
 </HTML> `;
-return htmlTempelate;
+return htmlTemplate;
 
 }
 

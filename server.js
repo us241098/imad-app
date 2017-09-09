@@ -84,7 +84,7 @@ app.get('/counter',function(req,res){
 });
 
 app.get('/article-one', function (req, res) {
-  res.send('article 2');
+  res.sendFile(path.join(__dirname,'ui'article-one.html'));
 
 });
 

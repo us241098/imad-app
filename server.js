@@ -6,13 +6,15 @@ var app = express();
 app.use(morgan('combined'));
 
 
-    var articleOne ={
-    title: 'Article One| Utsav Shukla',
+    var articles ={
+        
+    'article-one':{
+        title: 'Article One| Utsav Shukla',
     heading: 'Article One',
     date: 'Sep 5,2016',
     content:`<p>
                 this is content for the first article
-            </p>`
+            </p>`}
 };
 
 function createTemplate(data){
@@ -87,8 +89,9 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articleOne));
+app.get('/:articleName', function (req, res) {
+    var articleName=req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
 
 });
 

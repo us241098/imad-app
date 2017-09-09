@@ -23,11 +23,14 @@ function createTemplate(data){
 
 var htmlTemplate = `
 
-    <HTML>
+    <html>
     <head>
         <title>
             ${title}
         </title>
+        <meta name="viewport" content="width-device-width,initial-scale=1" />
+        <link href="/ui/style.css" rel="stylesheet" />
+        
     </head>
     <body>
     <div class="container">
@@ -49,7 +52,8 @@ var htmlTemplate = `
         </div>
         
     </body>
-</HTML> `;
+</html> 
+`;
 return htmlTemplate;
 
 }
@@ -84,7 +88,7 @@ app.get('/counter',function(req,res){
 });
 
 app.get('/article-one', function (req, res) {
-  res.sendFile(path.join(__dirname,'ui','article-one.html'));
+  res.send(createTemplate(articleOne));
 
 });
 

@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne ={
+    var articleOne ={
     title: 'Article One| Utsav Shukla',
     heading: 'Article One',
     date: 'Sep 5,2016',
@@ -76,8 +76,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var counter=0;
+
 app.get('/counter',function(req,res){
+    var counter=0;
     counter = counter+1;
     res.send(counter.toString());
 });

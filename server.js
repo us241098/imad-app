@@ -84,7 +84,7 @@ app.get('/counter',function(req,res){
 });
 
 app.get('/article-one.html', function (req, res) {
-  res.send(createTemplate(articleOne));
+  res.send('article 2');
 
 });
 
